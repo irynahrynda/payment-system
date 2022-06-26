@@ -104,8 +104,8 @@ Code http: 200
 Code http: 500
 Incoming data validation errors - код http: 400
 {
-"code": "код ошибки",
-"text": "текст ошибки"
+"code": "error code",
+"text": "error text"
 }
 
 ### - Libraries/frameworks used
