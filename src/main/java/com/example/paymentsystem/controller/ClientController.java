@@ -2,7 +2,6 @@ package com.example.paymentsystem.controller;
 
 import com.example.paymentsystem.dto.ClientRequestDto;
 import com.example.paymentsystem.dto.ClientResponseDto;
-import com.example.paymentsystem.mappers.ClientMapper;
 import com.example.paymentsystem.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClientController {
     private final ClientService clientService;
 
-    public ClientController(ClientService clientService, ClientMapper clientMapper) {
+    public ClientController(ClientService clientService) {
         this.clientService = clientService;
     }
 

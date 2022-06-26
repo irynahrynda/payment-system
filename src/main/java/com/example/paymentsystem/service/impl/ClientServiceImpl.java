@@ -20,8 +20,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public ClientResponseDto createClient(ClientRequestDto clientRequestDto) {
-        Client client = clientMapper.mapToModel(clientRequestDto);
-        client = clientRepository.save(client);
+        Client client = clientRepository.save(clientMapper.mapToModel(clientRequestDto));
         return clientMapper.mapToDto(client);
     }
 }
