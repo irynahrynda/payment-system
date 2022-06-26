@@ -7,8 +7,8 @@ It provides some functionality:
 ### - Creating a client
 #### Request:
 {
-"first_name": "Имя",
-"last_name": "Фамилия",
+"first_name": "Name",
+"last_name": "Last Name",
 "accounts" : [
 {
 "account_num": "123456789",
@@ -58,7 +58,7 @@ client_id
 "source_acc_id": 654,
 "dest_acc_id": 655,
 "amount": 100.00,
-"reason": "назначение платежа"
+"reason": "purpose of payment"
 }
 
 #### Response:
@@ -75,13 +75,13 @@ Code http: 201
 "source_acc_id": 654,
 "dest_acc_id": 655,
 "amount": 100.00,
-"reason": "назначение платежа"
+"reason": "purpose of payment"
 },
 {
 "source_acc_id": 655,
 "dest_acc_id": 654,
 "amount": 1000.00,
-"reason": "назначение платежа"
+"reason": "purpose of payment"
 }
 ]
 
