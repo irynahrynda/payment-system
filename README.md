@@ -1,16 +1,11 @@
 # payment-system
 
-Необходимо разработать веб-приложение, реализующее функциональность
-платежного портала. Приблизительный сценарий:
+This is a simple web application that implements the functionality of payment system.
 
-1. Создание нескольких клиентов со счетами
-2. Проведение платежей.
-3. Получение информации по проведенным/забракованным платежам.
+It provides some functionality:
 
-## Создание клиента
-
-#### Запрос:
-
+### - Creating a client
+#### Request:
 {
 "first_name": "Имя",
 "last_name": "Фамилия",
@@ -28,22 +23,19 @@
 ]
 }
 
-#### Ответ:
-
+#### Response:
 Код http: 201
 {
 "client_id": 123
 }
 
-## Поиск счета по идентификатору клиента
 
-#### Входящие параметры:
+### - Search for an account by client ID
+#### Input parameters:
 
 client_id
 
-#### Ответ сервиса:
-
-#### Список счетов клиента
+#### Service response: List of customer accounts
 [
 {
 "account_id": 654,
@@ -59,10 +51,9 @@ client_id
 }
 ]
 
-## Создание платежа
 
-#### Запрос:
-
+### - Creating a payment
+#### Request:
 {
 "source_acc_id": 654,
 "dest_acc_id": 655,
@@ -70,17 +61,15 @@ client_id
 "reason": "назначение платежа"
 }
 
-#### Ответ:
-
-Код http: 201
+#### Response:
+Code http: 201
 {
 "payment_id": 789
 }
 
-## Создание пачки платежей
 
-#### Запрос:
-
+### - Creating list of payments
+#### Request:
 [
 {
 "source_acc_id": 654,
@@ -96,9 +85,8 @@ client_id
 }
 ]
 
-#### Ответ:
-
-Код http: 200
+#### Response:
+Code http: 200
 [
 {
 "payment_id": 789,
@@ -111,21 +99,18 @@ client_id
 ]
 
 
-
-## Ошибки:
-
-#### Общий формат ответа с ошибкой:
-
-Код http: 500
-Ошибки валидации входящих данных - код http: 400
+### - Errors (Exceptions):
+#### General answer format with an error:
+Code http: 500
+Incoming data validation errors - код http: 400
 {
 "code": "код ошибки",
 "text": "текст ошибки"
 }
 
-## Используемые библиотеки/фреймворки
-1. SpringBoot 2
+### - Libraries/frameworks used
+1. SpringBoot
 2. Hibernate, Spring data JPA
 3. Spring JDBC
-4. Postgresql 12
+4. Postgre/ sql 
 5. Maven/Gradle
