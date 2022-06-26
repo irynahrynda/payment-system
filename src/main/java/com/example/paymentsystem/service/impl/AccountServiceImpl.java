@@ -26,9 +26,4 @@ public class AccountServiceImpl implements AccountService {
                 .map(accountMapper::mapToDto)
                 .collect(Collectors.toList());
     }
-
-    @Override
-    public AccountResponseDto findById(Long id) {
-        return accountMapper.mapToDto(accountRepository.findById(id).orElseThrow());
-    }
 }
